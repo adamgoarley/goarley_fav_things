@@ -2,22 +2,81 @@
 @import 'modules/_navbar';
 @import 'modules/_users';
 @import 'modules/_lightbox';
+// @import ''
 
+// body {
+//     color: $main-color;
+//     background-color: $body-bg;
+// }
 
-body {
-    color: $main-color;
-    background-color: $body-bg;
-}
+ body {
+  background: linear-gradient(270deg, #30afdf, #9698e1, #2b87e1);
+  background-size: 600% 600%;
+  
+  -webkit-animation: AnimationName 22s ease infinite;
+  -moz-animation: AnimationName 22s ease infinite;
+  animation: AnimationName 22s ease infinite;
+  
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+ }
 
 h1, h2, h3 { color:$heading-color; }
-h4{ color: ; }
-p{ color: ; }
+// h4{ color: ; }
+// p{ color: ; }
+
+#header {
+  align-content: center;
+  margin-left: 0 auto;
+  width: 100%;
+}
+// .nav-head
+// {
+//   float: right;
+// }
+
+// .nav-head ul{
+//   list-style: none;
+// }
+
+#section3
+{
+  text-align: center;
+  padding-bottom: 30px;
+}
 
 
 .panel { min-height: 80vh; }
 
+.banner-info {
+  width: 100%;
+  height: 400px;
+  background-color: #23D3E2;
+}
+
+.banner-info h1 {
+  text-align: center;
+  font-size: 50px;
+  position: relative;
+  top: 40%;
+}
+
 .panel:nth-child(odd) {
-    background-color: salmon;
+    // background-color: salmon;
+    background-color: blue;
     color: white;
 }
 
@@ -61,10 +120,19 @@ nav {
             flex: 0 1 200px;
     text-align: center;
     padding: 8px;
+
   }
   
-  .team .user-panel .u-avatar {
+  .team .user-panel .u-image {
     max-width: 200px;
+  }
+
+  .u-image {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
   }
   
   .team .user-panel .u-link {
@@ -76,8 +144,8 @@ nav {
 
   .u-link
   {
-    background-color: #8FC1E3;
     padding: 10px;
+    border-radius: 20px;
   }
   
   .team .user-panel h1, .team .user-panel h3 {
@@ -90,7 +158,7 @@ nav {
           -ms-flex: 1 1;
               flex: 1 1;
     }
-    .team .user-panel .u-avatar {
+    .team .user-panel .u-image {
       max-width: 300px;
     }
   }
@@ -135,7 +203,7 @@ nav {
     border: thin solid white;
     padding: 2px 14px 5px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(89, 183, 245, 0.411);
   }
   
   .show-lb {
@@ -171,7 +239,8 @@ nav {
     display: none;
   }
   
-  footer {
+  footer 
+  {
     color: orange;
   }
   
