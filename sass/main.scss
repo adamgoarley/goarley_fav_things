@@ -4,11 +4,6 @@
 @import 'modules/_lightbox';
 // @import ''
 
-// body {
-//     color: $main-color;
-//     background-color: $body-bg;
-// }
-
  body {
   background: linear-gradient(270deg, #30afdf, #9698e1, #2b87e1);
   background-size: 600% 600%;
@@ -35,22 +30,16 @@
  }
 
 h1, h2, h3 { color:$heading-color; }
+h1{ font-family: 'Indie Flower', cursive; }
 // h4{ color: ; }
-// p{ color: ; }
+ h2 {font-size: 28px; font-family: 'Indie Flower', cursive;}
+ p{ font-family: 'Open Sans', sans-serif; font-size: 18px; color:$heading-color;}
 
 #header {
   align-content: center;
   margin-left: 0 auto;
   width: 100%;
 }
-// .nav-head
-// {
-//   float: right;
-// }
-
-// .nav-head ul{
-//   list-style: none;
-// }
 
 #section3
 {
@@ -65,11 +54,12 @@ h1, h2, h3 { color:$heading-color; }
   width: 100%;
   height: 400px;
   background-color: #23D3E2;
+  margin-top: -68px;
 }
 
 .banner-info h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 70px;
   position: relative;
   top: 40%;
 }
@@ -175,7 +165,7 @@ nav {
     top: 0;
     z-index: 5000;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(76, 114, 238, 0.85);
   }
   
   .lightbox .sidebar {
@@ -255,6 +245,10 @@ nav {
   
   ul li a {
     text-decoration: none;
+  }
+
+  footer{
+    text-align: center;
   }
 
 @import 'modules/_footer'
