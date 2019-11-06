@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Nov 05, 2019 at 04:50 AM
+-- Generation Time: Nov 06, 2019 at 04:51 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `tbl_bio` (
   `ID` tinyint(4) NOT NULL,
   `profID` tinyint(4) DEFAULT NULL,
+  `bio2` varchar(1000) NOT NULL,
   `bio` varchar(200) DEFAULT NULL,
   `social` varchar(60) DEFAULT NULL,
   `classes` varchar(100) DEFAULT NULL,
@@ -39,35 +40,10 @@ CREATE TABLE `tbl_bio` (
 -- Dumping data for table `tbl_bio`
 --
 
-INSERT INTO `tbl_bio` (`ID`, `profID`, `bio`, `social`, `classes`, `Name`) VALUES
-(1, 1, 'Pan is  a freakin wild code ninja. He knows WAAAAAAY to many things about code. It\'s a problem.', 'twitter, facebook, tik tok', 'MMED30sumthin Web Dev 3', 'Sailing'),
-(2, 2, 'Trevor is a hard-core introvert who also loves teaching. He also really likes JavaScript, especially the shiny new full stack dev stuff.', 'twitter, facebook, snapchat, slack', 'MMED3012 Multimedia Authoring 3', 'Photography'),
-(3, 3, 'Justin loves fishing and outdoors stuff. He is also a fantastic teacher and works hard at constantly uprading the IDP program to be the best it can be.', 'facebook, snapchat', 'MMED1012 Web Design Fundamentals', 'Travel');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_card`
---
-
-CREATE TABLE `tbl_card` (
-  `ID` int(11) NOT NULL,
-  `Name` varchar(60) COLLATE utf8_bin NOT NULL,
-  `Logo` varchar(200) COLLATE utf8_bin NOT NULL,
-  `URL` varchar(200) COLLATE utf8_bin NOT NULL,
-  `SocialMedia` varchar(100) COLLATE utf8_bin NOT NULL,
-  `JobTitle` varchar(60) COLLATE utf8_bin NOT NULL,
-  `image` varchar(30) COLLATE utf8_bin DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Dumping data for table `tbl_card`
---
-
-INSERT INTO `tbl_card` (`ID`, `Name`, `Logo`, `URL`, `SocialMedia`, `JobTitle`, `image`) VALUES
-(1, 'Sailing', 'https://www.fanshaweonline.ca/d2l/lp/navbars/29533/theme/viewimage/32508983/view?v=20.19.8.17536-327', 'https://www.fanshawec.ca', 'facebook', '', 'sailboat.jpg'),
-(2, 'Photography', 'https://www.fanshaweonline.ca/d2l/lp/navbars/29533/theme/viewimage/32508983/view?v=20.19.8.17536-327', 'https://www.fanshawec.ca', 'facebook, twitter, snapchat', '', 'photography.jpg'),
-(3, 'Travel', 'https://www.fanshaweonline.ca/d2l/lp/navbars/29533/theme/viewimage/32508983/view?v=20.19.8.17536-327', 'https://www.fanshawec.ca', 'kik, twitter, tik tok', '', 'travel.jpg');
+INSERT INTO `tbl_bio` (`ID`, `profID`, `bio2`, `bio`, `social`, `classes`, `Name`) VALUES
+(1, 1, 'Sailing is one of my biggest passions. I have been sailing since I was 9 years old and haven\'t stopped since! I was lucky to be able to sail in my first professional regatta back in April. This was a once in a lifetime opportunity to racing against and with some of the best sailors in the world. My dream one day is to retire on a sailboat in the Caribbean!', '', 'Instagram', 'MMED30sumthin Web Dev 3', 'Sailing'),
+(2, 2, 'Photography is such a big part of my life. I started a wedding photography business when I was 15 and have now grown the business into my full time job. ', '', 'www.adamgoarley.com', 'MMED3012 Multimedia Authoring 3', 'Photography'),
+(3, 3, 'Traveling is something I absolutely love to do. Whether it is just to a new place an hour away or backpacking Europe! I am so lucky to have met so many people all over the world through sailing that it lets me travel cheaply as I am able to stay with them!', '', 'facebook, snapchat', 'MMED1012 Web Design Fundamentals', 'Travel');
 
 --
 -- Indexes for dumped tables
@@ -80,12 +56,6 @@ ALTER TABLE `tbl_bio`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `tbl_card`
---
-ALTER TABLE `tbl_card`
-  ADD PRIMARY KEY (`ID`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -94,12 +64,6 @@ ALTER TABLE `tbl_card`
 --
 ALTER TABLE `tbl_bio`
   MODIFY `ID` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `tbl_card`
---
-ALTER TABLE `tbl_card`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
